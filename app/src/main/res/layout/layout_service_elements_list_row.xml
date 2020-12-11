@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/serviceElementLogoImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_error_outline_24" />
+
+    <EditText
+        android:id="@+id/serviceElementNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Field Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/serviceElementLogoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/serviceElementLogoImageView"
+        app:layout_constraintTop_toTopOf="@+id/serviceElementLogoImageView" />
+
+    <Switch
+        android:id="@+id/serviceElementMandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mandatory"
+        app:layout_constraintStart_toStartOf="@+id/serviceElementLogoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/serviceElementNameEditText" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/serviceElementMandatory"
+        app:layout_constraintTop_toBottomOf="@+id/serviceElementNameEditText">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Validation:"
+            android:textColor="#000000" />
+
+        <Spinner
+            android:id="@+id/serviceElementValidation"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:foregroundTint="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_baseline_unfold_more_24"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
